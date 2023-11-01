@@ -28,6 +28,8 @@
 
   export let linkComponent = 'a';
 
+  export let onClick
+
   let ListDividersContext = getReactiveContext(
     'ListDividersContext',
     (value) => {
@@ -74,6 +76,7 @@
       bind:this={rippleEl.current}
       class={c.button}
       {...buttonAttrs}
+      on:click={onClick}
     >
       <slot />
     </svelte:element>
@@ -83,6 +86,7 @@
       bind:this={rippleEl.current}
       class={c.button}
       {...buttonAttrs}
+      on:click={onClick}
     >
       <slot />
     </svelte:component>
