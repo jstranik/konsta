@@ -193,8 +193,7 @@
       {:else}
         <!-- svelte-ignore a11y-autofocus -->
         {#if type === 'select'}
-          <svelte:element
-            this={InputComponent}
+          <select
             id={inputId}
             bind:this={inputEl}
             class={c.input[labelStyleIsFloating]}
@@ -229,7 +228,7 @@
             on:blur={onBlurInternal}
           >
             <slot />
-          </svelte:element>
+          </select>
         {:else}
           <svelte:element
             this={InputComponent}
